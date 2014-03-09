@@ -27,5 +27,7 @@ function mk_links {
 
 add_link "dot/tmux.conf" "$HOME/.tmux.conf"
 add_link "dot/gitignore" "$HOME/.gitignore"
+add_link "dot/vimrc" "$HOME/.vimrc"
+add_link "dot/mutt" "$HOME/.mutt"
 
 mk_links

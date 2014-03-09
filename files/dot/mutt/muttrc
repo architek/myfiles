@@ -1,0 +1,53 @@
+# .mutt/muttrc
+set message_cachedir="~/.mutt/.mutt_msg_cache"
+set header_cache="~/.mutt/.mutt_header_cache"
+
+#
+set pager_index_lines=7
+
+#Keybinding for imap fetch
+bind index "^" imap-fetch-mail
+
+#folder-hook 'fastmail.fm' 'source ~/.mutt/account.fm'
+folder-hook 'gmail.com' 'source ~/.mutt/account.gmail'
+
+#account-hook fastmail.fm 'set imap_user=user1@fastmail.fm'
+account-hook gmail.com 'set imap_user=teebeenator@gmail.com'
+
+#~/Maildir, will be the default mailbox opened
+#set folder="~/Maildir"
+#set mask="!^\\.[^.]"
+#set mbox="~/Maildir"
+#set record="+.Sent"
+#set postponed="+.Drafts"
+#set spoolfile="~/Maildir"
+
+#
+set crypt_autosign=yes
+#set crypt_autoencrypt=yes
+set copy                    # save copies of sent messages
+set delete                  # don't ask me to delete messages
+set edit_headers            # show headers when editing
+set fast_reply
+set pager_stop              # don't go to next message at end of msg
+set include
+set noallow_8bit
+set editor="vim -X '+/^$' '++1'"
+set include                             # Include the message in replies.
+set timeout=15
+set mail_check=60
+set beep=yes
+
+
+#GPG
+message-hook '!(~g|~G) ~b"^-----BEGIN\ PGP\ (SIGNED\ )?MESSAGE"' "exec check-traditional-pgp"
+set pgp_auto_decode=yes
+
+#Sort
+set sort=threads
+set sort_browser=date
+set sort_aux=reverse-last-date-received
+
+#
+source ~/.mutt/colors.mutt
+source ~/.mutt/macros.mutt
