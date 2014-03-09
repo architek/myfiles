@@ -1,0 +1,21 @@
+" Début .vimrc
+
+set nocompatible
+set bs=2
+set background=dark
+set wrapmargin=8
+syntax on
+set ruler
+set nu
+colorscheme darkblue
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set filetype=on
+set iskeyword+=58
+
+set backupdir=/tmp/
+set directory=/tmp/
+
+" Fin .vimrc
