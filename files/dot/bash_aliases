@@ -1,0 +1,10 @@
+#
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
+
+alias upd='sudo aptitude update'
+alias upg='sudo aptitude safe-update'
+alias ins='sudo aptitude install'
+alias pur='sudo aptitude purge'
+alias pol='sudo apt-cache policy'
