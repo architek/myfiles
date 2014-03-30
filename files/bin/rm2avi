@@ -1,0 +1,1 @@
+mencoder file.rm -oac mp3lame -lameopts cbr:br=128 -ovc lavc -lavcopts vcodec=mpeg4:vbitrate=1000 -o file.avi
