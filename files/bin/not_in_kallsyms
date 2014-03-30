@@ -1,0 +1,1 @@
+for i in `nm -D $1 | awk '{print $2}' | egrep -v "^[D|B|T|R|A|V]$"` ; do if [  "`grep $i /proc/kallsyms`" != "" ]; then echo  "$i:KO"; fi; done

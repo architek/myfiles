@@ -1,0 +1,4 @@
+#!/bin/sh
+while [ $(deborphan $* | wc -l) != 0 ] ; do 
+deborphan $* | while read i; do apt-get remove -y $i; done
+done
