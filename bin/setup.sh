@@ -25,11 +25,16 @@ function mk_links {
     done
 }
 
+function mk_links_bin {
+    ln -s $MY_PATH/bin/* $HOME/bin/
+}
+
 
 add_link "dot/tmux.conf" "$HOME/.tmux.conf"
 add_link "dot/gitignore" "$HOME/.gitignore"
 add_link "dot/vimrc" "$HOME/.vimrc"
 add_link "dot/mutt" "$HOME/.mutt"
-add_link "bin/lastinst.sh" "$HOME/bin/lastinst.sh"
 
 mk_links
+mk_links_bin
+
