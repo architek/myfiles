@@ -1,0 +1,7 @@
+[user]
+    name = Laurent Kislaire
+    email = teebeenator@gmail.com
+[push]
+    default = simple
+[github]
+    user = architek
