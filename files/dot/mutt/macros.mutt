@@ -1,8 +1,0 @@
-#Shortcuts for sending non standard inline signing (not using PGP/MIME)
-#macro   compose \CP     "Fgpg --clearsign\ny"
-#macro   compose \CS     "Fgpg --clearsign\ny^T^Uapplication/pgp; format=text; x-action=sign\n"
-
-#Shorcuts for switching from one mailbox to another
-macro index <f2> '<change-folder>imaps://imap.gmail.com<enter>'
-macro index <f3> '<change-folder>~/Maildir<enter>'
-
