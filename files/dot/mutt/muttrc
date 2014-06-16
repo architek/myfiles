@@ -1,53 +1,42 @@
-# .mutt/muttrc
-set message_cachedir="~/.mutt/.mutt_msg_cache"
-set header_cache="~/.mutt/.mutt_header_cache"
+source "gpg2 -dq $HOME/.my-pass |"
 
-#
-set pager_index_lines=7
-
-#Keybinding for imap fetch
-bind index "^" imap-fetch-mail
-
-#folder-hook 'fastmail.fm' 'source ~/.mutt/account.fm'
-folder-hook 'gmail.com' 'source ~/.mutt/account.gmail'
-
-#account-hook fastmail.fm 'set imap_user=user1@fastmail.fm'
-account-hook gmail.com 'set imap_user=teebeenator@gmail.com'
-
-#~/Maildir, will be the default mailbox opened
-#set folder="~/Maildir"
-#set mask="!^\\.[^.]"
-#set mbox="~/Maildir"
-#set record="+.Sent"
-#set postponed="+.Drafts"
-#set spoolfile="~/Maildir"
-
-#
-set crypt_autosign=yes
-#set crypt_autoencrypt=yes
-set copy                    # save copies of sent messages
-set delete                  # don't ask me to delete messages
-set edit_headers            # show headers when editing
-set fast_reply
-set pager_stop              # don't go to next message at end of msg
-set include
-set noallow_8bit
-set editor="vim -X '+/^$' '++1'"
-set include                             # Include the message in replies.
-set timeout=15
-set mail_check=60
-set beep=yes
-
+unset arrow_cursor                           # use arrow cursor
+unset askbcc                                 # don't prompt for bcc's
+unset askcc                                  # don't prompt for cc's
+unset beep                                   # don't beep on error
+unset beep_new                               # don't beep on new message
+set   bounce_delivered                       # unset: remove Delivered-To: when bouncing?
+unset collapse_unread                        # don't collapse threads with unread mails
+set   uncollapse_jump                        # jump to unread message when uncollapse
+set   confirmappend                          # may want to change this later
+set   copy                                   # save copies of sent messages
+set   delete                                 # don't ask me to delete messages - just do it!
+set   edit_headers                           # display the headers when I'm editing a message
+set   fast_reply                             # don't prompt for stuff when replying
+set   followup_to                            # add Mail-Followup-To header
+set   help                                   # show help on first line of display
+unset mark_old                               # don't mark unread messages as Old
+unset menu_scroll                            # scroll menu a page on last line
+set   narrow_tree                            # narrow threading trees
+set   pager_stop                             # don't go to next message at end of message
+set   sort=threads                           # 
+set   sort_browser=date
+set   sort_aux=reverse-last-date-received
+set   include
+set   pager_index_lines=7                      # index above pager of 7 lines
+set   editor="vim -X '+/^$' '++1'"
+set   timeout=15
+set   mail_check=60                          # check mail every 60s
+#set noallow_8bit
 
 #GPG
+set crypt_autosign=yes
+#set crypt_autoencrypt=yes
 message-hook '!(~g|~G) ~b"^-----BEGIN\ PGP\ (SIGNED\ )?MESSAGE"' "exec check-traditional-pgp"
 set pgp_auto_decode=yes
 
-#Sort
-set sort=threads
-set sort_browser=date
-set sort_aux=reverse-last-date-received
+#Bindings
+bind index "^" imap-fetch-mail          # keybinding for imap fetch
 
-#
-source ~/.mutt/colors.mutt
-source ~/.mutt/macros.mutt
+#Source profile
+source ~/.mutt/muttrc.local.$MUTT
