@@ -5,7 +5,7 @@ MY_PATH="`dirname \"$0\"`"
 MY_PATH="`( cd \"$MY_PATH/../files\" && pwd )`"
 
 function link {
-    rm -rf $2
+#    rm -rf $2
     ln -fs $1 $2
 }
 
@@ -32,6 +32,7 @@ function mk_links_bin {
 
 add_link "dot/tmux.conf" "$HOME/.tmux.conf"
 add_link "dot/gitignore" "$HOME/.gitignore"
+add_link "dot/gitconfig" "$HOME/.gitconfig"
 add_link "dot/vimrc" "$HOME/.vimrc"
 add_link "dot/mutt" "$HOME/.mutt"
 add_link "dot/my-pass" "$HOME/.my-pass"
