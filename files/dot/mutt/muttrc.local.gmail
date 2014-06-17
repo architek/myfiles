@@ -1,17 +1,21 @@
-set from = teebeenator@gmail.com
+set my_user = teebeenator@gmail.com
 set my_server = imap.gmail.com
 set my_smtp_server = smtp.gmail.com
-set my_user = teebeenator@gmail.com
-set imap_user  =  $my_user
-set imap_pass  =  $my_gmail_pass
+set from = $my_user
+set imap_user = $my_user
+set imap_pass = $my_gmail_pass
 
-set spoolfile = "imaps://$my_server/INBOX"
-set folder = "imaps://$my_server/[Google Mail]"
+set smtp_url = "smtp://teebeenator:$my_gmail_pass@$my_smtp_server:587"
+
+set folder = imaps://$my_server:993
+set spoolfile = +INBOX
+set postponed = "+[Google Mail]/Brouillons"
+set trash = "+[Google Mail]/Corbeille"
+unset copy
+
+#Use e to archive mail (in Tous les messages). Use ;e to archive all tag messages.
+#quote-char to workaround space in mailboxes inside quotes
+macro index,pager e "<save-message>=[Google<quote-char><space>Mail]/Tous<quote-char><space>les<quote-char><space>messages<enter><enter>" "Archiver la conversation"
+
 set header_cache = ~/.mutt/hcache/gmail
-
-set postponed = "+Brouillons"
-set record = "+Messages envoyés"
-set smtp_url = "smtps://teebeenator:$my_gmail_pass@$my_smtp_server:465"
-set ssl_starttls = "yes"
-
-
+set message_cachedir = ~/.mutt/mcache/gmail
