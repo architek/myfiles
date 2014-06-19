@@ -32,9 +32,12 @@ set   mail_check=60                          # check mail every 60s
 #GPG
 set crypt_autosign=yes
 #set crypt_autoencrypt=yes
+#check-traditional-pgp calls display-message internally so during save-message function, 
+#it is not a valid command and gets interpreted as a string. GPG inline messages can't be saved then.
 message-hook '!(~g|~G) ~b"^-----BEGIN\ PGP\ (SIGNED\ )?MESSAGE"' "exec check-traditional-pgp"
 set pgp_auto_decode=yes
 set pgp_timeout=3600
+set pgp_replyinline=yes
 
 set realname="Laurent"
 
