@@ -14,7 +14,7 @@ set trash = "+[Google Mail]/Corbeille"
 unset copy
 
 #Use e to archive mail (in Tous les messages). Use ;e to archive all tag messages.
-#quote-char to workaround space in mailboxes inside quotes
+#quote-char to workaround space in mailboxes inside quotes for "Tous les messages"
 macro index,pager e "<save-message>=[Google<quote-char><space>Mail]/Tous<quote-char><space>les<quote-char><space>messages<enter><enter>" "Archiver la conversation"
 
 set header_cache = ~/.mutt/hcache/gmail
