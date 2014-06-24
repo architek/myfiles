@@ -33,6 +33,7 @@ function mk_links_bin {
 add_link "dot/tmux.conf" "$HOME/.tmux.conf"
 add_link "dot/gitignore" "$HOME/.gitignore"
 add_link "dot/gitconfig" "$HOME/.gitconfig"
+add_link "dot/ssh_config" "$HOME/.ssh/config"
 add_link "dot/vimrc" "$HOME/.vimrc"
 add_link "dot/mutt" "$HOME/.mutt"
 add_link "dot/my-pass" "$HOME/.my-pass"
