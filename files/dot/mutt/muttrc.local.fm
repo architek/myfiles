@@ -1,21 +1,17 @@
-set from = tee_bee_@fastmail.fm
+set my_user = tee_bee_@fastmail.fm
 set my_server = mail.messagingengine.com
 set my_smtp_server = mail.messagingengine.com
-set my_user = tee_bee_@fastmail.fm
+set from = $my_user
 set imap_user = $my_user
 set imap_pass = $my_fm_pass
 
-set spoolfile = imaps://$my_server/INBOX
+set smtp_url = "smtp://$my_user:$my_fm_pass@$my_smtp_server:587"
+
 set folder = imaps://$my_server/INBOX
-set header_cache = ~/.mutt/hcache/fastmail
+set spoolfile = $folder
 
-mailboxes imaps://$my_server/INBOX
-
-#mailboxes imaps://$my_server/INBOX.foo
-#mailboxes imaps://$my_server/INBOX.bar
-#mailboxes imaps://$my_server/INBOX.baz
-
-set record = "imaps://$my_server/INBOX.Sent Items"
 set postponed = "imaps://$my_server/INBOX.Drafts"
-set smtp_url = "smtp://$my_user:$my_fm_pass@$my_smtp_server:587/"
+set record = "imaps://$my_server/INBOX.Sent Items"
 
+set header_cache = ~/.mutt/hcache/fastmail
+set message_cachedir = ~/.mutt/mcache/fastmail
