@@ -3,6 +3,8 @@ all: dot mbin deb
 ROOT_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 DOT_DIR := $(ROOT_DIR)files/dot
 BIN_DIR := $(ROOT_DIR)files/bin
+DOT = $(wildcard $(DOT_DIR)/.*)
+BIN = $(wildcard $(BIN_DIR)/*)
 
 PKG = \
 	deborphan dlocate apt-file debootstrap \
@@ -11,46 +13,11 @@ PKG = \
 	mplayer mencoder\
 	strace nmap
 
-DOT = \
-	.bash_aliases \
-	.bash_profile \
-	.gitconfig \
-	.gitignore \
-	.tmux.conf \
-	.mutt \
-	.vim \
-	.vimrc
-
-BIN = \
-	ccze.sh \
-	coloriptables.sh \
-	conn_acct.sh \
-	ctrlaltback.sh \
-	display_fw_log.sh \
-	effect_img.sh \
-	flv2avi \
-	git.sh \
-	ipt_new.sh \
-	jpeg_1280_1024.sh \
-	jpegqual.sh \
-	lastinst.sh \
-	list_recommends.sh \
-	m4a_2_mp3.sh \
-	modules_graph \
-	modules_graph.sh \
-	montage_polaroid.sh \
-	movie_info.sh \
-	not_in_kallsyms \
-	orphan \
-	rm2avi \
-	tlog.pl
-
-
 dot:
-	@$(foreach var,$(DOT), ln -fs $(DOT_DIR)/$(var) $(HOME)/$(var) ;)
+	@$(foreach var,$(DOT), ln -fs $(var) $(HOME)/$(notdir $(var)) 2>/dev/null ;)
 
 mbin:
-	@$(foreach var,$(BIN), ln -fs $(BIN_DIR)/$(var) $(HOME)/bin/$(var) ;)
+	@$(foreach var,$(BIN), ln -fs $(var) $(HOME)/bin/$(notdir $(var)) ;)
 
 deb:
 	@sudo apt-get install -qqy $(PKG) &>/dev/null
