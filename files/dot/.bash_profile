@@ -14,4 +14,12 @@ if [ -f "$HOME/.mypass.gpg" ]; then
   . <( gpg2 -dq $HOME/.mypass.gpg )
 fi
 
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+	PATH="$HOME/bin:$PATH"
+fi
 
