@@ -4,7 +4,12 @@ ROOT_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 DOT_DIR := $(ROOT_DIR)files/dot
 BIN_DIR := $(ROOT_DIR)files/bin
 
-PKG = deborphan dlocate apt-file binutils unp smartmontools strace mplayer debootstrap nmap tmux screen mutt vim mlocate mencoder
+PKG = \
+	deborphan dlocate apt-file debootstrap \
+	binutils unp tmux screen mutt mlocate\
+	smartmontools \
+	mplayer mencoder\
+	strace nmap
 
 DOT = \
 	.bash_aliases \
