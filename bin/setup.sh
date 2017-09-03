@@ -30,12 +30,14 @@ function mk_links_bin {
 }
 
 
-add_link "dot/tmux.conf" "$HOME/.tmux.conf"
-add_link "dot/gitignore" "$HOME/.gitignore"
+add_link "dot/bash_aliases" "$HOME/.bash_aliases"
+add_link "dot/bash_profile" "$HOME/.bash_profile"
 add_link "dot/gitconfig" "$HOME/.gitconfig"
-add_link "dot/vimrc" "$HOME/.vimrc"
+add_link "dot/gitignore" "$HOME/.gitignore"
 add_link "dot/mutt" "$HOME/.mutt"
 add_link "dot/my-pass" "$HOME/.my-pass"
+add_link "dot/vimrc" "$HOME/.vimrc"
+add_link "dot/tmux.conf" "$HOME/.tmux.conf"
 
 mk_links
 mk_links_bin
