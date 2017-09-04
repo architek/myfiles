@@ -8,7 +8,7 @@ BIN = $(wildcard $(BIN_DIR)/*)
 
 PKG = \
 	deborphan dlocate apt-file debootstrap \
-	binutils unp tmux screen mutt mlocate\
+	binutils unp tmux screen mutt mlocate perl-doc\
 	smartmontools \
 	mplayer mencoder\
 	strace nmap
@@ -21,3 +21,5 @@ mbin:
 
 deb:
 	@sudo apt-get install -qqy $(PKG) &>/dev/null
+
+.PHONY: all dot mbin deb
