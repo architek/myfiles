@@ -11,7 +11,7 @@ BIN := $(wildcard $(BIN_DIR)/*)
 PKG = \
 	deborphan dlocate apt-file debootstrap \
 	binutils unp tmux screen mutt mlocate perl-doc\
-	smartmontools \
+	smartmontools logwatch\
 	mplayer mencoder\
 	strace nmap
 
