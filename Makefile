@@ -13,7 +13,7 @@ PKG = \
 	binutils unp tmux screen mutt mlocate perl-doc\
 	smartmontools \
 	mplayer mencoder\
-	strace nmap
+	strace nmap ncdu
 
 dot:
 	@echo -n "Linking dot files:"
