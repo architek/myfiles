@@ -1,4 +1,3 @@
-set my_user = tee_bee_@fastmail.fm
 set my_server = mail.messagingengine.com
 set my_smtp_server = mail.messagingengine.com
 set from = $my_user
