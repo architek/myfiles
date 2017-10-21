@@ -1,5 +1,9 @@
 APT="apt"
 
+#general
+alias ..="cd .."
+alias ...="cd ../.."
+
 # some more ls aliases
 alias ll='ls -l'
 alias la='ls -A'
@@ -22,7 +26,7 @@ alias mwine="WINEPREFIX=~/.wine32 WINEARCH=win32 wine"
 
 #FTP put
 function ftput {
-  __ftp_server=192.168.1.254
+  __ftp_server = 192.168.1.254
   __root_ftp_path="Disque\ dur"
   __def_ftp_path="/"
   __ftp_rel_path=${2:-$__def_ftp_path}
