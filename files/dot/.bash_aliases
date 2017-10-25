@@ -26,11 +26,12 @@ alias mwine="WINEPREFIX=~/.wine32 WINEARCH=win32 wine"
 
 #FTP put
 function ftput {
-  __ftp_server = 192.168.1.254
-  __root_ftp_path="Disque\ dur"
-  __def_ftp_path="/"
-  __ftp_rel_path=${2:-$__def_ftp_path}
-  __ftp_path="$__root_ftp_path/$__ftp_rel_path"
+
+  __ftp_server=192.168.1.254
+  __root_ftp_path='Disque dur'
+  __def_ftp_path=
+  __ftp_rel_path="${2:-${__def_ftp_path}}"
+  __ftp_path="${__root_ftp_path}/${__ftp_rel_path}"
 
   if [ -d "$1" ]; then
     __cmd="mirror -R "
@@ -41,7 +42,7 @@ function ftput {
     return
   fi
 
-  echo "Copying $1 to $__ftp_path"
+  echo "Copying $1 to $__ftp_server $__ftp_path"
   lftp -u freebox,$FBX_PASS $__ftp_server<<EOF
       cd $__ftp_path
       $__cmd "$1"
