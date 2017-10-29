@@ -7,6 +7,7 @@ DOT_DIR := $(ROOT_DIR)files/dot
 BIN_DIR := $(ROOT_DIR)files/bin
 DOT := $(wildcard $(DOT_DIR)/.*)
 BIN := $(wildcard $(BIN_DIR)/*)
+debug := 1
 
 PKG = \
 	deborphan dlocate apt-file debootstrap \
@@ -16,13 +17,13 @@ PKG = \
 	strace nmap ncdu
 
 dot:
+	@$(foreach var,$(DOT), ( ln -fs $(var) $(HOME)/$(notdir $(var)); if [ ${debug} = 1 ]; then echo "Debug: dotfile $(var)"; fi) 2>/dev/null ;)
 	@echo -n "Linking dot files:"
-	@$(foreach var,$(DOT), ln -fs $(var) $(HOME)/$(notdir $(var)) 2>/dev/null ;)
 	@echo "done"
 
 mbin:
+	@$(foreach var,$(BIN), ( ln -fs $(var) $(HOME)/bin/$(notdir $(var)); if [ ${debug} = 1 ]; then echo "Debug: binary $(var)"; fi) 2>/dev/null ;)
 	@echo -n "Linking bin files:"
-	@$(foreach var,$(BIN), ln -fs $(var) $(HOME)/bin/$(notdir $(var)) ;)
 	@echo "done"
 
 deb:
