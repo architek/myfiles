@@ -13,8 +13,8 @@ PKG = \
 	deborphan dlocate apt-file debootstrap \
 	binutils unp tmux screen mutt mlocate perl-doc\
 	smartmontools logwatch\
-	mplayer mencoder\
-	strace nmap ncdu
+	whois strace nmap hping3 htop ncdu haveged \
+	mplayer mencoder
 
 dot:
 	@$(foreach var,$(DOT), ( ln -fs $(var) $(HOME)/$(notdir $(var)); if [ ${debug} = 1 ]; then echo "Debug: dotfile $(var)"; fi) 2>/dev/null ;)
@@ -28,6 +28,6 @@ mbin:
 
 deb:
 	@echo -n "Installing packages:"
-	@sudo apt-get install -qqy $(PKG) &>/dev/null
+	@sudo apt-get install -qqy $(PKG) 2>&1 >/dev/null
 	@echo "done"
 
