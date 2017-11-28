@@ -10,11 +10,12 @@ BIN := $(wildcard $(BIN_DIR)/*)
 debug := 1
 
 PKG = \
-	deborphan dlocate apt-file debootstrap \
+	deborphan dlocate apt-file debootstrap etckeeper \
 	binutils unp tmux screen mutt mlocate perl-doc\
 	smartmontools logwatch\
 	whois strace nmap hping3 htop ncdu haveged \
-	mplayer mencoder
+	liblocal-lib-perl \
+	mplayer mencoder flac lame
 
 dot:
 	@$(foreach var,$(DOT), ( ln -fs $(var) $(HOME)/$(notdir $(var)); if [ ${debug} = 1 ]; then echo "Debug: dotfile $(var)"; fi) 2>/dev/null ;)
