@@ -2,6 +2,6 @@
 source=${1}
 dest=${source/flv/avi}
 
-#ffmpeg -sameq -i ${source} -acodec libmp3lame ${dest}
+#ffmpeg -i "${source}" -acodec libmp3lame "${dest}" -qscale 0
 ffmpeg -i "${source}" -acodec libmp3lame -vcodec libx264 "${dest}" -pass 1 -qscale 0
 ffmpeg -i "${source}" -acodec libmp3lame -vcodec libx264 "${dest}" -pass 2 -qscale 0
