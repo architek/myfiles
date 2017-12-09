@@ -10,12 +10,14 @@ BIN := $(wildcard $(BIN_DIR)/*)
 debug := 1
 
 PKG = \
-	deborphan dlocate apt-file debootstrap etckeeper \
-	binutils unp tmux screen mutt mlocate perl-doc\
-	smartmontools logwatch\
-	whois strace nmap hping3 htop ncdu haveged \
-	liblocal-lib-perl \
-	mplayer mencoder flac lame
+	deborphan dlocate apt-file debootstrap etckeeper mlocate\
+	unp tmux screen mutt autojump\
+	smartmontools logwatch \
+	whois strace nmap hping3 htop ncdu haveged parallel\
+	liblocal-lib-perl perl-doc vim-gtk binutils\
+	mplayer mencoder flac lame ffmpeg
+	#big dependencies
+	#glances pandoc
 
 dot:
 	@$(foreach var,$(DOT), ( ln -fs $(var) $(HOME)/$(notdir $(var)); if [ ${debug} = 1 ]; then echo "Debug: dotfile $(var)"; fi) 2>/dev/null ;)
@@ -23,6 +25,7 @@ dot:
 	@echo "done"
 
 mbin:
+	@mkdir -p $(HOME)/bin
 	@$(foreach var,$(BIN), ( ln -fs $(var) $(HOME)/bin/$(notdir $(var)); if [ ${debug} = 1 ]; then echo "Debug: binary $(var)"; fi) 2>/dev/null ;)
 	@echo -n "Linking bin files:"
 	@echo "done"
