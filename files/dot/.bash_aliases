@@ -24,6 +24,11 @@ function bigpk {
 #misc
 alias mwine="WINEPREFIX=~/.wine32 WINEARCH=win32 wine"
 
+#perl
+function perl_modver {
+  perl -M$1\ 9999
+}
+
 #FTP put
 function ftput {
 
