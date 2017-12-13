@@ -10,11 +10,12 @@ BIN := $(wildcard $(BIN_DIR)/*)
 debug := 1
 
 PKG = \
-	deborphan dlocate apt-file debootstrap etckeeper mlocate\
-	unp tmux screen mutt autojump\
-	smartmontools logwatch \
-	whois strace nmap hping3 htop ncdu haveged parallel\
-	liblocal-lib-perl perl-doc vim-gtk binutils\
+	cpanoutdated liblocal-lib-perl perl-doc \
+	deborphan dlocate apt-file debootstrap mlocate\
+	etckeeper mutt\
+	whois strace nmap hping3 haveged smartmontools logwatch \
+	unp tmux screen autojump ncdu htop parallel bash-completion\
+	vim-gtk binutils\
 	mplayer mencoder flac lame ffmpeg
 	#big dependencies
 	#glances pandoc
