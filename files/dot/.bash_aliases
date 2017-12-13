@@ -29,7 +29,7 @@ function perl_modver {
   perl -M$1\ 9999
 }
 
-#FTP put
+#FTP put FIXME
 function ftput {
 
   __ftp_server=192.168.1.254
