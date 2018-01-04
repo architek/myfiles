@@ -14,7 +14,7 @@ PKG = \
 	deborphan dlocate apt-file debootstrap mlocate\
 	etckeeper mutt\
 	whois strace nmap hping3 haveged smartmontools logwatch \
-	unp tmux screen autojump ncdu htop parallel bash-completion\
+	unp tmux screen autojump ncdu htop parallel bash-completion lsof strace\
 	vim-gtk binutils\
 	mplayer mencoder flac lame ffmpeg
 	#big dependencies
