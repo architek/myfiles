@@ -26,3 +26,5 @@ fi
 export PATH="/usr/lib/ccache:$PATH"
 
 eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)"
+
+export MPD_HOST=rpi3
