@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # m4a to mp3
 
@@ -27,9 +27,11 @@ for m4a in "$@"; do
   ' - > "$opts"
 
  # convert it
- faad "$m4a"
- eval "lame -q $quality -b $bitrate "`cat "$opts"`" \"$wav\" \"$mp3\""
+ err=0
+ faad "$m4a" || err=1
+ eval "lame -q $quality -b $bitrate "`cat "$opts"`" \"$wav\" \"$mp3\"" || err=1
 
  # cleanup
  rm -f "$opts" "$wav" "$info"
+ if [[ $err == 0 ]]; then rm "$m4a"; fi
 done

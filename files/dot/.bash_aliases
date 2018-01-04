@@ -23,6 +23,7 @@ function bigpk {
 
 #misc
 alias mwine="WINEPREFIX=~/.wine32 WINEARCH=win32 wine"
+alias dmesg="/bin/dmesg -T"
 
 #perl
 function perl_modver {
