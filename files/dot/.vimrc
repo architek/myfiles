@@ -1,8 +1,8 @@
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
-colorscheme evening
+"colorscheme evening
 set showmatch
 set expandtab
-set shiftwidth=2
-set softtabstop=2
+set shiftwidth=4
+set softtabstop=4
