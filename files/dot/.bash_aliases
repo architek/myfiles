@@ -24,6 +24,8 @@ function bigpk {
 #misc
 alias mwine="WINEPREFIX=~/.wine32 WINEARCH=win32 wine"
 alias dmesg="/bin/dmesg -T"
+alias music="ncmpcpp"
+mpc_random='mpc clear | mpc listall | shuf -n 20 | mpc add ; mpc play'
 
 #perl
 function perl_modver {
