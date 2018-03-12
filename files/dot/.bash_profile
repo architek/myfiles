@@ -31,4 +31,4 @@ export PATH="$HOME/.local/bin:$PATH"
 # perl local lib
 eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)"
 
-export MPD_HOST=rpi3
+export MPD_HOST=m93
