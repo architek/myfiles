@@ -32,3 +32,4 @@ export PATH="$HOME/.local/bin:$PATH"
 eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)"
 
 export TORSOCKS_CONF_FILE=/etc/tor/torsocks.conf
+export MPD_HOST=m93

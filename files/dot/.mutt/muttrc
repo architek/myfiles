@@ -27,6 +27,7 @@ set   pager_index_lines=7                    # index above pager of 7 lines
 set   editor="vim -X '+/^$' '++1'"
 set   timeout=15
 set   mail_check=60                          # check mail every 60s
+set   markers=no                             # no line wrap in the pager (url for example)
 #set noallow_8bit
 
 #GPG
