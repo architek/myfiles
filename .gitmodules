@@ -7,3 +7,6 @@
 [submodule "files/dot/.vim/vim-pathogen"]
 	path = files/dot/.vim/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
+[submodule "files/dot/.vim/bundle/python-mode"]
+	path = files/dot/.vim/bundle/python-mode
+	url = https://github.com/python-mode/python-mode.git
