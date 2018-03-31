@@ -30,9 +30,10 @@ function bigpk {
 alias beet_unknown='beet ls -ap genre:Unknown'
 
 # beet_group_sort : list by genre
+# beet_group_sort rating : list by rating
 # beet_group_sort year genre:Rock : list by year for Rock
 function beet_group_sort {
-    cri=${1:-\$genre}
+    cri=${1:-genre}
     beet ls -f '$path:$'"$cri" ${@:2} | cut -d: -f 2 | sort | uniq -c | sort -nr
 }
 # beet_genre_set Rock artist:Floyd
