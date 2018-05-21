@@ -1,9 +1,9 @@
-apt install git
+Portable config and scripts
 
-git clone --recursive git@github.com:architek/myfiles.git
+Install:
 
-apt install make
+    apt install git make sudo
+    git clone --recursive git@github.com:architek/myfiles.git
+    cd myfiles
+    make dot mbin deb
 
-cd myfiles
-
-make
