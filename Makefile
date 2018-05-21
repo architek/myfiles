@@ -11,12 +11,12 @@ debug := 1
 
 PKG = \
 	cpanoutdated liblocal-lib-perl perl-doc \
-	deborphan dlocate apt-file debootstrap mlocate\
+	deborphan dlocate apt-file debootstrap mlocate apt-listchanges\
 	etckeeper mutt\
 	whois strace nmap hping3 haveged smartmontools logwatch \
 	unp tmux screen autojump ncdu htop parallel bash-completion lsof strace\
 	vim-gtk binutils\
-	mplayer mencoder flac lame ffmpeg
+	mpv mencoder flac lame ffmpeg
 	#big dependencies
 	#glances pandoc
 
