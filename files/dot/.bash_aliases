@@ -25,6 +25,33 @@ function bigpk {
   dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n
 }
 
+# perl
+##########
+function perl_modver {
+  perl -M$1\ 9999
+}
+
+# rsync
+##########
+_rsync_cmd='rsync --verbose --progress --human-readable --compress --archive --hard-links --one-file-system'
+
+if grep -q 'xattrs' <(rsync --help 2>&1); then
+  _rsync_cmd="${_rsync_cmd} --acls --xattrs"
+fi
+
+# Mac OS X and HFS+ Enhancements
+# http://help.bombich.com/kb/overview/credits#opensource
+if [[ "$OSTYPE" == darwin* ]] && grep -q 'file-flags' <(rsync --help 2>&1); then
+  _rsync_cmd="${_rsync_cmd} --crtimes --fileflags --protect-decmpfs --force-change"
+fi
+
+alias rsync-copy="${_rsync_cmd}"
+alias rsync-move="${_rsync_cmd} --remove-source-files"
+# --update  skip files that are newer on the receiver
+alias rsync-update="${_rsync_cmd} --update"
+# --delete  delete extraneous files from dest dirs
+alias rsync-synchronize="${_rsync_cmd} --update --delete"
+
 # beets
 ##########
 alias beet_unknown='beet ls -ap genre:Unknown'
@@ -50,12 +77,6 @@ function beet_rating_list {
 
 # beet_genre_list artist:"Pink Floyd"
 alias beet_genre_list='beet ls -f '"'"'$path:$genre'"'"
-
-# perl
-##########
-function perl_modver {
-  perl -M$1\ 9999
-}
 
 # misc
 ##########
