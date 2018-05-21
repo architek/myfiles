@@ -10,7 +10,7 @@ BIN := $(wildcard $(BIN_DIR)/*)
 debug := 1
 
 PKG = \
-	cpanoutdated liblocal-lib-perl perl-doc \
+	cpanoutdated liblocal-lib-perl perl-doc gcc\
 	deborphan dlocate apt-file debootstrap mlocate\
 	etckeeper mutt\
 	whois strace nmap hping3 haveged smartmontools logwatch \
