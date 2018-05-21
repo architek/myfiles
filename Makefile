@@ -10,13 +10,13 @@ BIN := $(wildcard $(BIN_DIR)/*)
 debug := 1
 
 PKG = \
-	cpanoutdated liblocal-lib-perl perl-doc \
-	deborphan dlocate apt-file debootstrap mlocate\
+	cpanoutdated liblocal-lib-perl perl-doc gcc\
+	deborphan dlocate apt-file debootstrap mlocate apt-listchanges\
 	etckeeper mutt\
 	whois strace nmap hping3 haveged smartmontools logwatch \
 	unp tmux screen autojump ncdu htop parallel bash-completion lsof strace\
 	vim-gtk binutils\
-	mplayer mencoder flac lame ffmpeg
+	mpv mencoder flac lame ffmpeg
 	#big dependencies
 	#glances pandoc
 
