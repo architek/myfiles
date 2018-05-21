@@ -1,9 +1,0 @@
-# Write your default config options here!
-# Cache 64MB
-cache = 65536
-# Prefix 20% of the cache before starting playback
-cache-min = 20
-# Prefill 20% of the cache before restarting playback after the cache emptied
-cache-seek-min = 20
-
-
