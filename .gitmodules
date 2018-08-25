@@ -13,3 +13,6 @@
 [submodule "files/dot/.vim/bundle/syntastic"]
 	path = files/dot/.vim/bundle/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "files/dot/.vim/bundle/python-mode"]
+	path = files/dot/.vim/bundle/python-mode
+	url = https://github.com/python-mode/python-mode.git
