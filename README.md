@@ -7,3 +7,6 @@ Install:
     cd myfiles
     make dot mbin deb
 
+Update:
+
+    git pull
