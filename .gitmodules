@@ -16,3 +16,6 @@
 [submodule "files/dot/.vim/bundle/python-mode"]
 	path = files/dot/.vim/bundle/python-mode
 	url = https://github.com/python-mode/python-mode.git
+[submodule "files/dot/.oh-my-zsh"]
+	path = files/dot/.oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git

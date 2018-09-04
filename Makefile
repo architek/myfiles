@@ -16,7 +16,8 @@ PKG = \
 	whois strace nmap hping3 haveged smartmontools logwatch \
 	unp tmux screen autojump ncdu htop parallel bash-completion lsof strace\
 	vim-gtk binutils\
-	mpv mencoder flac lame ffmpeg
+	mpv mencoder flac lame ffmpeg\
+	zsh fonts-powerline
 	#big dependencies
 	#glances pandoc
 
