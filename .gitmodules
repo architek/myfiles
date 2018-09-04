@@ -18,4 +18,4 @@
 	url = https://github.com/python-mode/python-mode.git
 [submodule "files/dot/.oh-my-zsh"]
 	path = files/dot/.oh-my-zsh
-	url = https://github.com/robbyrussell/oh-my-zsh.git
+	url = https://github.com/architek/oh-my-zsh.git
