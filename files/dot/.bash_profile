@@ -1,12 +1,3 @@
-GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-PATH="$HOME/git/android-stuffs/platform-tools:$PATH"
-PATH="$HOME/git/mkbootimg_tools:$PATH"
-
-USE_CCACHE=1
-ANDROID_JACK_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4G"
-USE_NINJA=false
-
 # decrypt passwords in RAM
 # encrypted with echo 'export MY_PASS="s3cr3t"' | gpg2 -ec -o ${HOME}/.mypass.gpg
 
@@ -23,6 +14,9 @@ if [ -d "$HOME/bin" ] ; then
 	PATH="$HOME/bin:$PATH"
 fi
 
+# Zsh powerlevel9k theme insist on overwritting LC_CTYPE
+export LC_CTYPE="fr_FR.UTF-8"
+
 export PATH="/usr/lib/ccache:$PATH"
 
 # python user scheme
@@ -33,3 +27,12 @@ eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)"
 
 export TORSOCKS_CONF_FILE=/etc/tor/torsocks.conf
 export MPD_HOST=m93
+
+GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+PATH="$HOME/git/android-stuffs/platform-tools:$PATH"
+PATH="$HOME/git/mkbootimg_tools:$PATH"
+
+USE_CCACHE=1
+ANDROID_JACK_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4G"
+USE_NINJA=false
