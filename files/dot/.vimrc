@@ -7,7 +7,7 @@ syntax on
 let g:pymode_python = 'python3'
 
 
-"colorscheme evening
+colorscheme evening
 set showmatch
 set expandtab
 set shiftwidth=4

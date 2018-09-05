@@ -13,7 +13,7 @@ PKG = \
 	cpanoutdated liblocal-lib-perl perl-doc gcc\
 	deborphan dlocate apt-file debootstrap mlocate apt-listchanges\
 	etckeeper mutt\
-	whois strace nmap hping3 haveged smartmontools logwatch \
+	whois strace nmap hping3 haveged smartmontools logwatch dnsutils \
 	unp tmux screen autojump ncdu htop parallel bash-completion lsof strace\
 	vim-gtk binutils\
 	mpv mencoder flac lame ffmpeg\
