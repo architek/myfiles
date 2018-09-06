@@ -22,13 +22,13 @@ PKG = \
 	#glances pandoc
 
 dot:
-	@$(foreach var,$(DOT), ( ln -fs $(var) $(HOME)/$(notdir $(var)); if [ ${debug} = 1 ]; then echo "Debug: dotfile $(var)"; fi) 2>/dev/null ;)
+	@$(foreach var,$(DOT), ( ln -fns $(var) $(HOME)/$(notdir $(var)); if [ ${debug} = 1 ]; then echo "Debug: dotfile $(var)"; fi) 2>/dev/null ;)
 	@echo -n "Linking dot files:"
 	@echo "done"
 
 mbin:
 	@mkdir -p $(HOME)/bin
-	@$(foreach var,$(BIN), ( ln -fs $(var) $(HOME)/bin/$(notdir $(var)); if [ ${debug} = 1 ]; then echo "Debug: binary $(var)"; fi) 2>/dev/null ;)
+	@$(foreach var,$(BIN), ( ln -fns $(var) $(HOME)/bin/$(notdir $(var)); if [ ${debug} = 1 ]; then echo "Debug: binary $(var)"; fi) 2>/dev/null ;)
 	@echo -n "Linking bin files:"
 	@echo "done"
 
