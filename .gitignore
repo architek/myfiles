@@ -1,1 +1,7 @@
 files/dot/.vim/.netrwhist
+
+files/dot/.irssi/*
+!files/dot/.irssi
+!files/dot/.irssi/scripts/
+!files/dot/.irssi/default.theme
+!files/dot/.irssi/fear2.theme
