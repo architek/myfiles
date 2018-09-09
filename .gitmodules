@@ -22,4 +22,4 @@
     branch = master
 [submodule "files/dot/.irssi/scripts/scripts.irssi.org"]
 	path = files/dot/.irssi/scripts/scripts.irssi.org
-	url = https://github.com/irssi/scripts.irssi.org.git
+	url = https://github.com/architek/scripts.irssi.org.git
