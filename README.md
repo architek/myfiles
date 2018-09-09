@@ -9,8 +9,8 @@
 
 **Update:**
 
-    git submodule update   # to get newly added submodules since clone
-    git pull               # to get updates for submodules repositories
+    git submodule update --recursive  # to get newly added submodules since clone
+    git pull                          # to get updates for submodules repositories
 
 **Switch to zsh shell:**
 
