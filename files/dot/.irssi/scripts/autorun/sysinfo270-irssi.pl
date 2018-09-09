@@ -1,0 +1,1 @@
+../scripts.irssi.org/scripts/sysinfo270-irssi.pl

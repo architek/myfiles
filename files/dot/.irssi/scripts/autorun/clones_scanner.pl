@@ -1,0 +1,1 @@
+../scripts.irssi.org/scripts/clones_scanner.pl
