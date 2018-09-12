@@ -21,7 +21,8 @@ Provides
 Aliases
 -------
 
-See Aliases_
+See Aliases_.
+
 .. _Aliases: Aliases.rst
 
 Update
