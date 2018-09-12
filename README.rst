@@ -21,7 +21,8 @@ Provides
 Aliases
 -------
 
-See `Aliases`_
+See Aliases_
+.. _Aliases: Aliases.rst
 
 Update
 ------
@@ -40,4 +41,3 @@ Switch to zsh shell
 
 *Remark*:Zsh uses powerlevel9k theme by default. If you use powerlevel9k, you will also need to install en_US.UTF-8 locales (used internally by powerlevel9k)
 
-.. Aliases: Aliases.rst
