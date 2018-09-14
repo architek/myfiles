@@ -13,6 +13,20 @@ Install
 Provides
 --------
 
+* Dotfiles
+
+   * bash
+   * zsh
+   * git
+   * irssi
+   * mutt
+   * vim
+   * tmux
+
+* Various Scripts
+
+* Some selected packages. Edit *Makefile* to suit your needs.
+
 Aliases
 -------
 
@@ -36,5 +50,5 @@ Switch to zsh shell
 
    chsh -s `which zsh`
 
-*Remark*:Zsh uses powerlevel9k theme by default. If you use powerlevel9k, you will also need to install en_US.UTF-8 locales (used internally by powerlevel9k)
+*Remark*:Zsh configuration now uses powerlevel9k theme. If you use powerlevel9k, you will also need to install en_US.UTF-8 locales (used internally by powerlevel9k). On debian systems, run ``dpkg-reconfigure locales`` and add en_US.UTF-8.
 
