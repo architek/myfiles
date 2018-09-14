@@ -28,9 +28,9 @@ See Aliases_.
 Update
 ------
 
-::
-
 Getting updates and submodules updates:
+
+::
 
     git pull
     git submodule sync   --recursive
