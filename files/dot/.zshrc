@@ -101,4 +101,5 @@ export LANG=fr_FR.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export "PATH=$HOME/.local/bin:$PATH"
+path=("$HOME/.local/bin" $path)
+path+=("$HOME/bin")

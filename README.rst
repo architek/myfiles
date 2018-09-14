@@ -1,6 +1,9 @@
 Portable config and scripts
 ===========================
 
+Repository to store my dotfiles, desktop scripts and tyical packages I install on desktop machines.
+This repository uses git submodules extensively to link to other projects. It's also easier to maintain and update.
+
 Install
 -------
 ::
@@ -16,11 +19,16 @@ Provides
 * Dotfiles
 
    * *bash*
-   * *zsh* with `o my zsh`_ (and powerlevel9k_ theme)
+   * *zsh* with 
+
+      * `o my zsh`_
+      * powerlevel9k_ theme with no special font (for portability)
+      * plugins: debian, git, extract, python, tmux
+
    * *git*
    * *irssi*
-   * *mutt*
-   * *vim* with some python related plugins
+   * *mutt* with a few different account types as example
+   * *vim* with some dev in particular python related plugins
    * *tmux*
    .. _o my zsh: https://github.com/robbyrussell/oh-my-zsh
    .. _powerlevel9k: https://github.com/bhilburn/powerlevel9k
