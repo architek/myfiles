@@ -17,7 +17,6 @@ Provides
 
    * *bash*
    * *zsh* with `o my zsh`_ (and powerlevel9k theme)
-
    .. _`o my zsh`: https://github.com/robbyrussell/oh-my-zsh
    * *git*
    * *irssi*
