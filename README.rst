@@ -16,14 +16,14 @@ Provides
 * Dotfiles
 
    * *bash*
-   * *zsh* with `o my zsh`_ (and powerlevel9k theme)
+   * *zsh* with `o my zsh`_ (and powerlevel9k_ theme)
    * *git*
    * *irssi*
    * *mutt*
    * *vim* with some python related plugins
    * *tmux*
-   .. _`o my zsh`: https://github.com/robbyrussell/oh-my-zsh
-
+   .. _o my zsh: https://github.com/robbyrussell/oh-my-zsh
+   .. _powerlevel9k: https://github.com/bhilburn/powerlevel9k
 
 * A few (basic) scripts.
 
