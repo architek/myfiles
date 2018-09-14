@@ -2,7 +2,8 @@ Portable config and scripts
 ===========================
 
 Repository to store my dotfiles, desktop scripts and tyical packages I install on desktop machines.
-This repository uses git submodules extensively to link to other projects. It's also easier to maintain and update.
+
+Rather than copying and manually syncing with other projets, this repository uses git submodules extensively.
 
 Install
 -------
