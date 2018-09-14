@@ -1,5 +1,5 @@
 #!/bin/sh
-alias_doc=aliases.rst
+alias_doc=Aliases.rst
 exec 1> "${alias_doc}"
 echo "Aliases"
 echo "=======\n"

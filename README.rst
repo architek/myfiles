@@ -15,17 +15,21 @@ Provides
 
 * Dotfiles
 
-   * bash
-   * zsh
-   * git
-   * irssi
-   * mutt
-   * vim
-   * tmux
+   * *bash*
+   * *zsh* with `o my zsh`_ (and powerlevel9k theme)
 
-* Various Scripts
+      .. _`o my zsh`: https://github.com/robbyrussell/oh-my-zsh
 
-* Some selected packages. Edit *Makefile* to suit your needs.
+   * *git*
+   * *irssi*
+   * *mutt*
+   * *vim* with some python related plugins
+   * *tmux*
+
+
+* A few (basic) scripts.
+
+* Some selected packages which will install on debian systems. Edit *Makefile* to suit your needs.
 
 Aliases
 -------
