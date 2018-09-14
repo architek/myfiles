@@ -5,18 +5,13 @@ Install
 -------
 
 ::
-
-
     apt install git make sudo
     git clone --recursive <https://github.com/architek/myfiles.git>
     cd myfiles
     make dot mbin deb
 
-
 Provides
 --------
-
-
 
 Aliases
 -------
@@ -31,7 +26,6 @@ Update
 Getting updates and submodules updates:
 
 ::
-
     git pull
     git submodule sync   --recursive
     git submodule update --recursive --init
@@ -40,7 +34,6 @@ Switch to zsh shell
 -------------------
 
 ::
-
     chsh -s `which zsh`
 
 *Remark*:Zsh uses powerlevel9k theme by default. If you use powerlevel9k, you will also need to install en_US.UTF-8 locales (used internally by powerlevel9k)
