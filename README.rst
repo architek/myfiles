@@ -3,7 +3,6 @@ Portable config and scripts
 
 Install
 -------
-
 ::
 
     apt install git make sudo
@@ -25,7 +24,6 @@ Update
 ------
 
 Getting updates and submodules updates:
-
 ::
 
     git pull
