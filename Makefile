@@ -34,6 +34,6 @@ mbin:
 
 deb:
 	@echo -n "Installing packages:"
-	@type apt-get >/dev/null || sudo apt-get install -qqy $(PKG) 2>&1 >/dev/null
+	@type apt-get >/dev/null && sudo apt-get -qqq update && sudo apt-get install -qqy $(PKG) 2>&1 >/dev/null
 	@echo "done"
 
