@@ -19,3 +19,6 @@
 !*.color15:    #E6E6E6
 xterm*background: black
 xterm*foreground: white
+XTerm*faceName: Hack Regular
+XTerm*faceSize: 10
+

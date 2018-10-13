@@ -3,7 +3,9 @@
 
 # Path to your oh-my-zsh installation.
   export ZSH="$HOME/.oh-my-zsh"
+  export TERM="xterm-256color"
 
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv status root_indicator background_jobs history time)
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -69,6 +71,7 @@ plugins=(
   extract
   python
   tmux
+  virtualenv
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -103,3 +106,6 @@ export LANG=fr_FR.UTF-8
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 path=("$HOME/.local/bin" $path)
 path+=("$HOME/bin")
+export PYTHONSTARTUP=$HOME/.pythonrc.py
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit && compinit -i

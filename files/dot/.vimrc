@@ -5,6 +5,8 @@ execute pathogen#helptags()
 filetype plugin indent on
 syntax on
 let g:pymode_python = 'python3'
+"let g:pymode_lint_ignore = "E501,W"
+let g:pymode_options_max_line_length = 120
 
 
 colorscheme evening
@@ -22,3 +24,4 @@ set softtabstop=4
 "let g:syntastic_auto_loc_list = 1
 "let g:syntastic_check_on_open = 1
 "let g:syntastic_check_on_wq = 0
+let g:syntastic_rst_checkers=['sphinx']
