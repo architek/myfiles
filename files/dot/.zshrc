@@ -11,7 +11,8 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv status root_indicator background_
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="powerlevel9k/powerlevel9k"
+
+[[ -v DISABLE_POWERLEVEL ]] || ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -66,12 +67,12 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  debian
-  git
-  extract
-  python
-  tmux
-  virtualenv
+    debian
+    git
+    extract
+    python
+    tmux
+    virtualenv
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -106,6 +107,8 @@ export LANG=fr_FR.UTF-8
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 path=("$HOME/.local/bin" $path)
 path+=("$HOME/bin")
+path+=("$HOME/git/pycharm/bin")
 export PYTHONSTARTUP=$HOME/.pythonrc.py
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
+alias gvim="/usr/bin/gvim $* 2>/dev/null"
