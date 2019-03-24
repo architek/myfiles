@@ -7,6 +7,7 @@ syntax on
 let g:pymode_python = 'python3'
 "let g:pymode_lint_ignore = "E501,W"
 let g:pymode_options_max_line_length = 120
+let g:pymode_virtualenv = 0
 
 
 colorscheme evening
