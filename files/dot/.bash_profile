@@ -36,3 +36,5 @@ PATH="$HOME/git/mkbootimg_tools:$PATH"
 USE_CCACHE=1
 ANDROID_JACK_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4G"
 USE_NINJA=false
+
+export PATH="$HOME/.poetry/bin:$PATH"
