@@ -1,5 +1,6 @@
+## !! PATH to be set in .zshenv as per doc !!
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+#export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
   export ZSH="$HOME/.oh-my-zsh"
@@ -70,6 +71,7 @@ plugins=(
     debian
     git
     extract
+    poetry
     python
     tmux
     virtualenv
@@ -105,10 +107,26 @@ export LANG=fr_FR.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-path=("$HOME/.local/bin" $path)
-path+=("$HOME/bin")
-path+=("$HOME/git/pycharm/bin")
+
+#ALIASES
+alias gvim="/usr/bin/gvim $* 2>/dev/null"
+
+#path+=("$HOME/bin")
+#path+=("$HOME/git/pycharm/bin")
+
+#PYTHON
 export PYTHONSTARTUP=$HOME/.pythonrc.py
+
+# Add poetry completion
+fpath+=~/.zfunc
+#HACKS
+#Completion
+
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
-alias gvim="/usr/bin/gvim $* 2>/dev/null"
+
+#JAVA
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
+export JDK_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
+export JDK_HOME=/usr/lib/jvm/jdk-11.0.2/
+export JAVA_HOME=/usr/lib/jvm/jdk-11.0.2/
