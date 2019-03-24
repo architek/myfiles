@@ -17,3 +17,5 @@
     recurseSubmodules = true
 [credential]
     helper = cache --timeout 28800
+[pager]
+	branch = false
