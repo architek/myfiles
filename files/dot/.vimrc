@@ -4,13 +4,27 @@ execute pathogen#infect()
 execute pathogen#helptags()
 filetype plugin indent on
 syntax on
+
+" Python
+" See pymode.txt for python mode
 let g:pymode_python = 'python3'
-"let g:pymode_lint_ignore = "E501,W"
-let g:pymode_options_max_line_length = 120
 let g:pymode_virtualenv = 0
+let g:pymode_lint_sort = ['E', 'C', 'I'] 
+au BufWritePre *.py PymodeLintAuto
+let g:pymode_lint_ignore = ["E501", "E265",]
 
 
+" Rope compl
+let g:pymode_rope_completion = 1
+let g:pymode_rope_complete_on_dot = 1
+let g:pymode_rope_completion_bind = '<C-Space>'
+
+
+
+" Color
 colorscheme evening
+
+" Base options
 set showmatch
 set expandtab
 set shiftwidth=4
