@@ -6,6 +6,7 @@ ROOT_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 DOT_DIR := $(ROOT_DIR)files/dot
 BIN_DIR := $(ROOT_DIR)files/bin
 DOT := $(wildcard $(DOT_DIR)/.*)
+
 BIN := $(wildcard $(BIN_DIR)/*)
 debug := 1
 
@@ -20,6 +21,8 @@ PKG = \
 	zsh fonts-powerline
 	#big dependencies
 	#glances pandoc
+all:
+	check
 
 dot:
 	@$(foreach var,$(DOT), ( ln -fns $(var) $(HOME)/$(notdir $(var)); if [ ${debug} = 1 ]; then echo "Debug: dotfile $(var)"; fi) 2>/dev/null ;)
@@ -37,3 +40,8 @@ deb:
 	@type apt-get >/dev/null && sudo apt-get -qqq update && sudo apt-get install -qqy $(PKG) 2>&1 >/dev/null
 	@echo "done"
 
+check:
+	@$(foreach var,$(DOT), ( if [ ! -L $(HOME)/$(notdir $(var)) ]; then echo "$(HOME)/$(notdir $(var)) NOT LINKED"; fi );)
+	@$(foreach var,$(BIN), ( if [ ! -L $(HOME)/bin/$(notdir $(var)) ]; then echo "$(HOME)/bin/$(notdir $(var)) NOT LINKED"; fi );)
+	@echo "\n*************\nPlease review files not linked before they are erased\n*************\n "
+	@read a
