@@ -73,6 +73,7 @@ plugins=(
     extract
     poetry
     python
+    systemd
     tmux
     virtualenv
 )
