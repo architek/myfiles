@@ -21,21 +21,19 @@ PKG = \
 	zsh fonts-powerline
 	#big dependencies
 	#glances pandoc
-all:
-	check
 
-dot:
+dot: check
 	@$(foreach var,$(DOT), ( ln -fns $(var) $(HOME)/$(notdir $(var)); if [ ${debug} = 1 ]; then echo "Debug: dotfile $(var)"; fi) 2>/dev/null ;)
 	@echo -n "Linking dot files:"
 	@echo "done"
 
-mbin:
+mbin: check
 	@mkdir -p $(HOME)/bin
 	@$(foreach var,$(BIN), ( ln -fns $(var) $(HOME)/bin/$(notdir $(var)); if [ ${debug} = 1 ]; then echo "Debug: binary $(var)"; fi) 2>/dev/null ;)
 	@echo -n "Linking bin files:"
 	@echo "done"
 
-deb:
+deb: check
 	@echo -n "Installing packages:"
 	@type apt-get >/dev/null && sudo apt-get -qqq update && sudo apt-get install -qqy $(PKG) 2>&1 >/dev/null
 	@echo "done"
