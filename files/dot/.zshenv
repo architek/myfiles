@@ -1,3 +1,8 @@
+# This is sourced also for non login shells
+# Should not produce output or assume the shell is attached to a tty
+#
+# Typical usage: Search path and import ENV variables
+
 #Local bin
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/bin/:$PATH

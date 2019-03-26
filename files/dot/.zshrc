@@ -108,25 +108,58 @@ export LANG=fr_FR.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-#ALIASES
-alias gvim="/usr/bin/gvim $* 2>/dev/null"
 
-#path+=("$HOME/bin")
-#path+=("$HOME/git/pycharm/bin")
+# Env
+############
+# PYTHON
+if [ -r ~/.pythonrc.py ]; then
+    export PYTHONSTARTUP=$HOME/.pythonrc.py
+fi
 
-#PYTHON
-export PYTHONSTARTUP=$HOME/.pythonrc.py
-
-# Add poetry completion
-fpath+=~/.zfunc
-#HACKS
-#Completion
-
-fpath=(~/.zsh/completion $fpath)
-autoload -Uz compinit && compinit -i
-
-#JAVA
+# JAVA
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
 export JDK_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
 export JDK_HOME=/usr/lib/jvm/jdk-11.0.2/
 export JAVA_HOME=/usr/lib/jvm/jdk-11.0.2/
+
+# Completion
+############
+# Add poetry completion
+fpath+=~/.zfunc
+# Hack
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit && compinit -i
+
+
+#ALIASES
+############
+if type "gvim" > /dev/null; then
+    alias gvim="/usr/bin/gvim $* 2>/dev/null"
+fi
+
+# beets
+if type "beet" > /dev/null; then
+    alias beet_unknown='beet ls -ap genre:Unknown'
+
+    # beet_group_sort : list by genre
+    # beet_group_sort rating : list by rating
+    # beet_group_sort year genre:Rock : list by year for Rock
+    function beet_group_sort {
+        cri=${1:-genre}
+        beet ls -f '$path:$'"$cri" ${@:2} | cut -d: -f 2 | sort | uniq -c | sort -nr
+    }
+    # beet_genre_set Rock artist:Floyd
+    function beet_genre_set {
+        beet mod genre="$1" ${@:2}
+    }
+    # beet_genre_get Floyd
+    alias beet_genre_get='beet ls -af '"'"'$path: $genre'"'"
+
+    # beet_rating_list genre:Rock
+    function beet_rating_list {
+        beet ls -f '$path:[Rating $rating][Play #$play_count][Skip #$skip_count][Played $last_played]' rating:0..1 rating- artist+ album+ disc+ track+ $*
+    }
+
+    # beet_genre_list artist:"Pink Floyd"
+    alias beet_genre_list='beet ls -f '"'"'$path:$genre'"'"
+fi
