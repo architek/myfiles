@@ -3,8 +3,7 @@
 #export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="$HOME/.oh-my-zsh"
-  export TERM="xterm-256color"
+export ZSH="$HOME/.oh-my-zsh"
 
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv status root_indicator background_jobs history time)
 # Set name of the theme to load --- if set to "random", it will
@@ -71,7 +70,6 @@ plugins=(
     debian
     git
     extract
-    poetry
     python
     systemd
     tmux
