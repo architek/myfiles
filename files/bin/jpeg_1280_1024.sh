@@ -1,6 +1,7 @@
 #!/bin/bash
-id=`identify $1`
+id=`identify "$1"`
 newname=${1/.jpg/-new.jpg}
+echo $newname
 maxw=1280
 maxh=1024
 maxw=1024
@@ -24,4 +25,4 @@ else
 	nh=$maxh
 	echo "Image $1 detected as width:$w, height:$h - Portrait: Ratio is $r, new dimensions: width=$nw, height=$nh"
 fi
-convert ${1} -geometry "${nw}x${nh}" -interlace Line ${newname}
+convert "${1}" -geometry "${nw}x${nh}" -interlace Line ${newname}
