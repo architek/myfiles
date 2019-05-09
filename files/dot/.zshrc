@@ -121,6 +121,9 @@ export JDK_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
 export JDK_HOME=/usr/lib/jvm/jdk-11.0.2/
 export JAVA_HOME=/usr/lib/jvm/jdk-11.0.2/
 
+# Perl
+eval $(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)
+
 # Completion
 ############
 # Add poetry completion
