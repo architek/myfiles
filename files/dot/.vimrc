@@ -10,22 +10,21 @@ syntax on
 " See pymode.txt for python mode
 let g:pymode_python = 'python3'
 let g:pymode_lint_sort = ['E', 'C', 'I'] 
-au BufWritePre *.py PymodeLintAuto
-let g:pymode_lint_ignore = ["E501", "E265"]
-"let g:pymode_lint_checkers = ['pylint', 'pyflakes', 'pep8', 'mccabe', ]
-"let g:pymode_lint_checkers = ['pylint', ]
 let g:pymode_lint_checkers = ['pylint', 'pep8', 'mccabe', 'pyflakes']
-
+au BufWritePre *.py PymodeLintAuto
 
 " Rope compl
+let g:pymode_rope = 1
 let g:pymode_rope_completion = 1
 let g:pymode_rope_complete_on_dot = 1
 let g:pymode_rope_completion_bind = '<C-Space>'
+let g:pymode_rope_show_doc_bind = '<C-c>d'
 
 
 
 " Color
 colorscheme evening
+set guioptions -=T
 
 " Base options
 set showmatch
