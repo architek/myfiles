@@ -118,6 +118,4 @@ PERL_LOCAL_LIB_ROOT="/home/lke/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROO
 PERL_MB_OPT="--install_base \"/home/lke/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/lke/perl5"; export PERL_MM_OPT;
 
-if [ -f $HOME/.local/bin/beet ]; then
-    eval "$($HOME/.local/bin/beet completion)"
-fi
+beet >/dev/null 2>&1 && eval "beet completion"
