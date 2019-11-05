@@ -7,9 +7,13 @@ Rather than copying and manually syncing with other projets, this repository use
 
 Install
 -------
+As root:
 ::
 
    apt install git make sudo
+   
+As normal user:
+::
    git clone --recursive https://github.com/architek/myfiles.git
    cd myfiles
    make dot mbin deb
