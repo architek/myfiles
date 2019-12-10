@@ -28,7 +28,7 @@ Provides
    * *zsh* with 
 
       * `o my zsh`_
-      * powerlevel9k_ theme with no special font (for portability)
+      * powerlevel10k_ theme with no special font (for portability)
       * plugins: debian, git, extract, python, tmux
 
    * *git*
@@ -37,7 +37,7 @@ Provides
    * *vim* with some dev in particular python related plugins
    * *tmux*
    .. _o my zsh: https://github.com/robbyrussell/oh-my-zsh
-   .. _powerlevel9k: https://github.com/bhilburn/powerlevel9k
+   .. _powerlevel10k: https://github.com/romkatv/powerlevel10k
 
 * A few (basic) scripts.
 
@@ -65,6 +65,7 @@ Switch to zsh shell
 ::
 
    chsh -s `which zsh`
+   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 
 *Remark*:Zsh configuration now uses powerlevel9k theme. If you use powerlevel9k, you will also need to install en_US.UTF-8 locales (used internally by powerlevel9k). On debian systems, run ``dpkg-reconfigure locales`` and add en_US.UTF-8.
 
