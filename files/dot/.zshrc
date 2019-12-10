@@ -12,7 +12,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv load pyenv status root_indicator 
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
 
-[[ -v DISABLE_POWERLEVEL ]] || ZSH_THEME="powerlevel9k/powerlevel9k"
+[[ -v DISABLE_POWERLEVEL ]] || ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -116,10 +116,11 @@ if [ -r ~/.pythonrc.py ]; then
 fi
 
 # JAVA
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
-export JDK_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
-export JDK_HOME=/usr/lib/jvm/jdk-11.0.2/
-export JAVA_HOME=/usr/lib/jvm/jdk-11.0.2/
+#export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
+#export JDK_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
+#export JDK_HOME=/usr/lib/jvm/jdk-11.0.2/
+#export JAVA_HOME=/usr/lib/jvm/jdk-11.0.2/
+export JAVA_HOME=/usr/lib/jvm/default-java
 
 # Perl
 eval $(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)

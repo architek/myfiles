@@ -19,7 +19,7 @@
 	branch = develop
 [submodule "files/dot/.oh-my-zsh"]
 	path = files/dot/.oh-my-zsh
-	url = https://github.com/architek/oh-my-zsh.git
+	url = https://github.com/ohmyzsh/ohmyzsh.git
 	branch = master
 [submodule "files/dot/.irssi/scripts/scripts.irssi.org"]
 	path = files/dot/.irssi/scripts/scripts.irssi.org

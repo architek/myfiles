@@ -1,1 +1,0 @@
-../scripts.irssi.org/scripts/mass_hilight_blocker.pl

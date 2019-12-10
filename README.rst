@@ -13,6 +13,7 @@ Install
    git clone --recursive https://github.com/architek/myfiles.git
    cd myfiles
    make dot mbin deb
+   curl -L https://cpanmin.us | perl - --sudo App::cpanminus
 
 Provides
 --------

@@ -42,3 +42,4 @@ set softtabstop=4
 "let g:syntastic_check_on_open = 1
 "let g:syntastic_check_on_wq = 0
 "let g:syntastic_rst_checkers=['sphinx']
+let g:syntastic_python_pylint_post_args="--max-line-length=120"
