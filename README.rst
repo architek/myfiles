@@ -16,6 +16,7 @@ As normal user:
 ::
    git clone --recursive https://github.com/architek/myfiles.git
    cd myfiles
+   git submodule update --recursive --remote
    make dot mbin deb
    curl -L https://cpanmin.us | perl - --sudo App::cpanminus
 
@@ -57,8 +58,10 @@ Getting updates and submodules updates:
 ::
 
    git pull
-   git submodule sync   --recursive
    git submodule update --recursive --init
+   # To use use the status of the submodule’s remote-tracking branch:
+   git submodule update --recursive --remote
+
 
 Switch to zsh shell
 -------------------
