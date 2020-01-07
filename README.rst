@@ -14,8 +14,9 @@ As root:
    
 As normal user:
 ::
-   git clone --recursive https://github.com/architek/myfiles.git
+   git clone https://github.com/architek/myfiles.git
    cd myfiles
+   git submodule init
    git submodule update --recursive --remote
    make dot mbin deb
    curl -L https://cpanmin.us | perl - --sudo App::cpanminus
