@@ -58,7 +58,7 @@ Getting updates and submodules updates:
 ::
 
    git pull
-   git submodule update --recursive --init
+   git submodule update --recursive
    # To use use the status of the submodule’s remote-tracking branch:
    git submodule update --recursive --remote
 
@@ -69,6 +69,3 @@ Switch to zsh shell
 
    chsh -s `which zsh`
    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
-
-*Remark*:Zsh configuration now uses powerlevel9k theme. If you use powerlevel9k, you will also need to install en_US.UTF-8 locales (used internally by powerlevel9k). On debian systems, run ``dpkg-reconfigure locales`` and add en_US.UTF-8.
-
