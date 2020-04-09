@@ -127,10 +127,7 @@ eval $(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)
 
 # Completion
 ############
-# Add poetry completion
-fpath+=~/.zfunc
-# Hack
-fpath=(~/.zsh/completion $fpath)
+# fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
 
 
@@ -166,3 +163,23 @@ if type "beet" > /dev/null; then
     # beet_genre_list artist:"Pink Floyd"
     alias beet_genre_list='beet ls -f '"'"'$path:$genre'"'"
 fi
+
+# rsync
+# perl
+##########
+function perl_modver {
+  perl -M$1\ 9999
+}
+
+# rsync
+##########
+_rsync_cmd='rsync --verbose --progress --human-readable --compress --archive --hard-links --one-file-system'
+
+alias rsync-copy="${_rsync_cmd}"
+alias rsync-move="${_rsync_cmd} --remove-source-files"
+# --update  skip files that are newer on the receiver
+alias rsync-update="${_rsync_cmd} --update"
+# --delete  delete extraneous files from dest dirs
+alias rsync-synchronize="${_rsync_cmd} --update --delete"
+
+compdef _rsync rsync-copy rsync-move rsync-update rsync-synchronize
