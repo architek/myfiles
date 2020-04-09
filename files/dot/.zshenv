@@ -13,3 +13,10 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+
+#Tmux renaming of pane
+function renamePane () {
+  read \?"Enter Pane Name: " pane_name;
+  # printf "\033]2;%s\033\\r:r" "${pane_name}";
+  printf "\033];%s\07\n" "${pane_name}";
+};
