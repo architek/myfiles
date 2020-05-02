@@ -21,12 +21,13 @@ let g:pymode_rope_completion_bind = '<C-Space>'
 let g:pymode_rope_show_doc_bind = '<C-c>d'
 
 
-
 " Color
 colorscheme evening
 if has("gui_running")
     set guioptions -=T
+    set guifont=Courier\ 10\ Pitch\ 11
 endif
+
 
 " Base options
 set showmatch

@@ -94,4 +94,6 @@ For Centos7 which ships a very old zsh, you can only use powerlevel9k
 
    git clone --depth=1 https://github.com/Powerlevel9k/powerlevel9k.git $ZSH_CUSTOM/themes/powerlevel9k
 
+You will need to patch powerlevel9k git status function as described here: https://github.com/Powerlevel9k/powerlevel9k/issues/1251
+
 Please see powerlevel github page on which fonts you need
