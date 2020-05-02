@@ -51,7 +51,7 @@ deb: check
 
 rpm: check
 	@echo -n "Installing packages:"
-	@type yum >/dev/null && sudo yum -y -q update && sudo yum -y -q install $(RPM) 2>&1 >/dev/null
+	@type yum >/dev/null && sudo yum -y -q check-update && sudo yum -y -q install $(RPM) 2>&1 >/dev/null
 	@echo "done"
 
 check:
