@@ -24,7 +24,9 @@ let g:pymode_rope_show_doc_bind = '<C-c>d'
 
 " Color
 colorscheme evening
-set guioptions -=T
+if has("gui_running")
+    set guioptions -=T
+endif
 
 " Base options
 set showmatch
