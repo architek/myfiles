@@ -87,3 +87,9 @@ Switch to zsh shell
 
    chsh -s `grep zsh /etc/shells`
    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+
+
+For Centos7 which ships a very old zsh, you can only use powerlevel9k
+::
+
+   git clone --depth=1 https://github.com/Powerlevel9k/powerlevel9k.git $ZSH_CUSTOM/themes/powerlevel9k
