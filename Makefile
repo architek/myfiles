@@ -27,7 +27,7 @@ RPM = \
 	etckeeper mutt\
 	whois strace nmap hping3 smartmontools logwatch dnsutils \
 	tmux screen autojump ncdu htop parallel bash-completion lsof strace xauth\
-	vim gvim binutils\
+	vim gvim binutils xorg-x11-fonts-Type1 \
 	mpv mencoder flac lame ffmpeg\
 	zsh
 	#big dependencies
