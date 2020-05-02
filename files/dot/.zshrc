@@ -12,7 +12,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv load pyenv status root_indicator 
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
 
-[[ -v DISABLE_POWERLEVEL ]] || ZSH_THEME="powerlevel10k/powerlevel10k"
+[[ -z DISABLE_POWERLEVEL ]] || ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
