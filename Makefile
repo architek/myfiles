@@ -25,10 +25,11 @@ PKG = \
 RPM = \
 	gcc \
 	etckeeper mutt\
-	whois strace nmap hping3 smartmontools logwatch dnsutils \
+	whois strace nmap hping3 smartmontools logwatch dnsutils\
 	tmux screen autojump ncdu htop parallel bash-completion lsof strace xauth\
-	vim gvim binutils xorg-x11-fonts-Type1 \
+	vim gvim binutils xorg-x11-fonts-Type1\
 	mpv mencoder flac lame ffmpeg\
+	yum-utils dnf rpm-build rpmrebuild\
 	zsh
 	#big dependencies
 	#glances pandoc
