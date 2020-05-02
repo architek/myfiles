@@ -79,6 +79,7 @@ plugins=(
     systemd
     tmux
     virtualenv
+    yum
 )
 
 source $ZSH/oh-my-zsh.sh
