@@ -1,6 +1,6 @@
-all: dot mbin deb
+all: dot mbin
 
-.PHONY: dot mbin deb
+.PHONY: dot mbin deb rpm
 
 ROOT_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 DOT_DIR := $(ROOT_DIR)files/dot
@@ -14,11 +14,22 @@ PKG = \
 	cpanoutdated liblocal-lib-perl perl-doc gcc\
 	deborphan dlocate apt-file debootstrap mlocate apt-listchanges\
 	etckeeper mutt\
-	whois strace nmap hping3 haveged smartmontools logwatch dnsutils \
+	whois nmap hping3 smartmontools logwatch dnsutils \
 	unp tmux screen autojump ncdu htop parallel bash-completion lsof strace\
 	vim-gtk binutils\
 	mpv mencoder flac lame ffmpeg\
 	zsh fonts-powerline
+	#big dependencies
+	#glances pandoc
+
+RPM = \
+	gcc \
+	etckeeper mutt\
+	whois strace nmap hping3 smartmontools logwatch dnsutils \
+	tmux screen autojump ncdu htop parallel bash-completion lsof strace xauth\
+	gvim binutils\
+	mpv mencoder flac lame ffmpeg\
+	zsh
 	#big dependencies
 	#glances pandoc
 
@@ -36,6 +47,11 @@ mbin: check
 deb: check
 	@echo -n "Installing packages:"
 	@type apt-get >/dev/null && sudo apt-get -qqq update && sudo apt-get install -qqy $(PKG) 2>&1 >/dev/null
+	@echo "done"
+
+rpm: check
+	@echo -n "Installing packages:"
+	@type yum >/dev/null && sudo yum -y -q update && sudo yum -y -q install $(RPM) 2>&1 >/dev/null
 	@echo "done"
 
 check:
