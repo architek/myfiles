@@ -5,13 +5,13 @@ Repository to store my dotfiles, desktop scripts and tyical packages I install o
 
 Rather than copying and manually syncing with other projets, this repository uses git submodules extensively.
 
-Install
--------
+Install on Debian
+-----------------
 As root:
 ::
 
    apt install git make sudo
-   
+
 As normal user:
 ::
    git clone https://github.com/architek/myfiles.git
@@ -19,7 +19,24 @@ As normal user:
    git submodule init
    git submodule update --recursive --remote
    make dot mbin deb
+
    curl -L https://cpanmin.us | perl - --sudo App::cpanminus
+
+   
+Install on Centos 7
+-------------------
+As root:
+::
+
+   yum install -y git make sudo perl-App-cpanminus perl-local-lib
+
+As normal user:
+::
+   git clone https://github.com/architek/myfiles.git
+   cd myfiles
+   git submodule init
+   git submodule update --recursive --remote
+   make dot mbin rpm
 
 Provides
 --------
@@ -43,7 +60,7 @@ Provides
 
 * A few (basic) scripts.
 
-* Some selected packages which will install on debian systems. Edit *Makefile* to suit your needs.
+* Some selected packages which will install on debian and redhat based systems. Edit *Makefile* to suit your needs.
 
 Aliases
 -------
