@@ -29,7 +29,7 @@ RPM = \
 	tmux screen autojump ncdu htop parallel bash-completion lsof strace xauth\
 	vim gvim binutils xorg-x11-fonts-Type1\
 	mpv mencoder flac lame ffmpeg\
-	yum-utils dnf rpm-build rpmrebuild\
+	yum-utils dnf rpm-build rpmrebuild rpmdevtools\
 	zsh
 	#big dependencies
 	#glances pandoc
