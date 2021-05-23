@@ -7,6 +7,9 @@
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/bin/:$PATH
 
+#Cross Compiling stuffs
+export PATH=$HOME/.local/gcc-arm/bin:$PATH
+
 #Pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
