@@ -14,6 +14,7 @@ As root:
 
 As normal user:
 ::
+
    git clone https://github.com/architek/myfiles.git
    cd myfiles
    git submodule init
@@ -32,6 +33,7 @@ As root:
 
 As normal user:
 ::
+
    git clone https://github.com/architek/myfiles.git
    cd myfiles
    git submodule init
@@ -57,6 +59,7 @@ Provides
    * *tmux*
    .. _o my zsh: https://github.com/robbyrussell/oh-my-zsh
    .. _powerlevel10k: https://github.com/romkatv/powerlevel10k
+
 
 * A few (basic) scripts.
 
@@ -97,3 +100,12 @@ For Centos7 which ships a very old zsh, you can only use powerlevel9k
 You will need to patch powerlevel9k git status function as described here: https://github.com/Powerlevel9k/powerlevel9k/issues/1251
 
 Please see powerlevel github page on which fonts you need
+
+Fzf
+---
+::
+
+   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+   ~/.fzf/install
+
+
