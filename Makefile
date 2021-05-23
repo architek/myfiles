@@ -29,7 +29,7 @@ RPM = \
 	tmux screen autojump ncdu htop parallel bash-completion lsof strace xauth\
 	vim gvim binutils xorg-x11-fonts-Type1\
 	mpv mencoder flac lame ffmpeg\
-	yum-utils dnf rpm-build rpmrebuild rpmdevtools\
+	yum-utils dnf rpm-build rpmrebuild rpmdevtools rpmlint\
 	zsh
 	#big dependencies
 	#glances pandoc
@@ -52,7 +52,7 @@ deb: check
 
 rpm: check
 	@echo -n "Installing packages:"
-	@type yum >/dev/null && sudo yum -y -q check-update && sudo yum -y -q install $(RPM) 2>&1 >/dev/null
+	@type yum >/dev/null && sudo yum -y -q check-update ; sudo yum -y -q install $(RPM) 2>&1 >/dev/null
 	@echo "done"
 
 check:
